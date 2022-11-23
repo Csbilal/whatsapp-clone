@@ -17,8 +17,6 @@ const port = process.env.PORT || 9000;
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => res.status(200).send("hloo"));
-
 app.get("/getallmeassges", (req, res) => {
   SMSModal.find((err, data) => {
     if (err) {
